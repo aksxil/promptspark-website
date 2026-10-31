@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Generated at build time from ADMOB_PUBLISHER_ID (scripts/generate-app-ads.mjs)
+/public/app-ads.txt
+
+# env files (this site needs none; never commit any)
+.env*
+
+# misc
+.DS_Store
+npm-debug.log*
+.vercel
+.wrangler
