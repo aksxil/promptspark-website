@@ -67,6 +67,11 @@ Cloudflare dashboard › Workers & Pages › Create › Pages › Connect to Git
 | Build output directory | `out` |
 | Environment variables | `NODE_VERSION` = `22`; `ADMOB_PUBLISHER_ID` = your `pub-…` ID (optional, for app-ads.txt) |
 
+Node 22 is also pinned by `.node-version`. Create a **Pages** project, not a Worker: the Workers "Import a
+repository" flow runs `npx wrangler deploy`, which detects Next.js, tries to set up OpenNext, and fails with
+`.next/standalone/.next/server/pages-manifest.json not found`. This site needs no `wrangler.jsonc`,
+`open-next.config.ts`, or `@opennextjs/cloudflare`; leave the Pages "Deploy command" empty.
+
 **B. Direct upload from your computer.**
 
 ```bash
